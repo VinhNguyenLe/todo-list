@@ -1,0 +1,141 @@
+@import "./mixins.scss";
+
+.dark-theme {
+  .bg-top {
+    background: url("../images/bg-desktop-dark.jpg");
+
+    @include maxDevice(520px) {
+      background: url("../images/bg-mobile-dark.jpg");
+    }
+  }
+
+  .bg-bottom {
+    background: var(--DVeryDarkBlue);
+  }
+
+  .input-wrap {
+    background-color: var(--DVeryDarkDesaturatedBlue);
+  }
+
+  .todo-text {
+    background-color: var(--DVeryDarkDesaturatedBlue);
+    color: var(--DLightGrayishBlue);
+
+    &::placeholder {
+      color: var(--DDarkGrayishBlue);
+    }
+  }
+
+  .todo-item {
+    background-color: var(--DVeryDarkDesaturatedBlue);
+    color: var(--DLightGrayishBlue);
+    border-color: var(--DVeryDarkGrayishBlue2);
+  }
+
+  .todo-holder {
+    background-color: var(--DVeryDarkDesaturatedBlue);
+  }
+
+  .view-mode {
+    background-color: var(--DVeryDarkDesaturatedBlue);
+
+    & p:hover {
+      color: var(--DLightGrayishBlue-hover);
+    }
+  }
+
+  .clear:hover {
+    color: var(--DLightGrayishBlue-hover);
+  }
+
+  .check-btn {
+    @include circle(
+      $w: 24px,
+      $bg: none,
+      $b: 1px solid var(--DVeryDarkGrayishBlue2)
+    );
+  }
+
+  .todo-context {
+    & span {
+      color: var(--DLightGrayishBlue);
+      &:hover {
+        color: #eee;
+      }
+    }
+
+    & .complete-todo {
+      text-decoration: line-through;
+      color: var(--DVeryDarkGrayishBlue);
+
+      &:hover {
+        color: var(--DVeryDarkGrayishBlue);
+      }
+    }
+  }
+}
+
+.light-theme {
+  .bg-top {
+    background: url("../images/bg-desktop-light.jpg");
+
+    @include maxDevice(520px) {
+      background: url("../images/bg-mobile-light.jpg");
+    }
+  }
+
+  .bg-bottom {
+    background: var(--LVeryLightGray);
+  }
+
+  .check-btn {
+    @include circle(
+      $w: 24px,
+      $bg: none,
+      $b: 1px solid var(--LLightGrayishBlue)
+    );
+  }
+
+  .view-mode {
+    background-color: #fff;
+  }
+
+  .todos {
+    width: 100%;
+    border-radius: 4px;
+    // overflow: hidden;
+    box-shadow: 0px 6px 24px -4px rgba(147, 148, 165, 0.75);
+    margin-top: 20px;
+
+    @include maxDevice(570px) {
+      box-shadow: 0px 6px 34px -11px rgb(147 148 165 / 81%);
+    }
+  }
+
+  @include maxDevice(520px) {
+    & .view-mode {
+      box-shadow: 0px 1px 34px -11px rgba(171, 172, 184, 0.81);
+    }
+  }
+
+  .todo-context {
+    & span {
+      &:hover {
+        color: #000;
+      }
+    }
+
+    & .complete-todo {
+      text-decoration: line-through;
+      color: var(--LLightGrayishBlue);
+
+      &:hover {
+        color: var(--LLightGrayishBlue);
+      }
+    }
+  }
+
+  .todo-holder {
+    background-color: #fff;
+  }
+}

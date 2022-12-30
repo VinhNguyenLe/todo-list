@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import "./mixins.scss";
+
+:root {
+  // ### Primary
+  --BrightBlue: #3a7bfd;
+  --CheckBackground: linear-gradient(135deg, #57ddff, #c058f3);
+  // ### Neutral
+  // ### Light Theme
+  --LVeryLightGray: #fafafa;
+  --LVeryLightGrayishBlue: #e4e5f1;
+  --LLightGrayishBlue: #d2d3db;
+  --LDarkGrayishBlue: #9394a5;
+  --LVeryDarkGrayishBlue: #484b6a;
+  // ### Dark Theme
+  --DVeryDarkBlue: #161722;
+  --DVeryDarkDesaturatedBlue: #25273c;
+  --DLightGrayishBlue: #cacde8;
+  --DLightGrayishBlue-hover: #e4e5f1;
+  --DDarkGrayishBlue: #777a92;
+  --DVeryDarkGrayishBlue: #4d5066;
+  --DVeryDarkGrayishBlue2: #393a4c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 0.3s ease;
+
+  &::after,
+  &::before {
+    position: absolute;
+  }
+}
+
+body {
+  font-size: 18px;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
